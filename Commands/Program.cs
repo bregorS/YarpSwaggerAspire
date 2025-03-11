@@ -22,6 +22,8 @@ app.UseHttpsRedirection();
 
 app.MapPost("api/v1/documents/", async () =>
 {
+    Console.WriteLine("CreateDocument called");
+    return TypedResults.Created();
 })
 .WithName("CreateDocument")
 .WithTags("Document")

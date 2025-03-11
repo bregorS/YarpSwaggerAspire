@@ -22,7 +22,8 @@ app.UseHttpsRedirection();
 
 app.MapGet("api/v1/documents", async (string? searchTerm, string? sortColumn, bool? sortByAscending, int? page, int? pageSize) =>
 {
-    return new List<Queries.Document>();
+    Console.WriteLine("GetAllDocuments called");
+    return TypedResults.Ok(new List<Queries.Document>());
 })
 .WithName("GetAllDocuments")
 .WithTags("Document")
@@ -37,7 +38,8 @@ app.MapGet("api/v1/documents", async (string? searchTerm, string? sortColumn, bo
 
 app.MapGet("api/v1/documents/{id}", async (Guid id) =>
 {
-    return new List<Queries.Document>();
+    Console.WriteLine("GetDocument called");
+    return TypedResults.Ok(new Queries.Document());
 })
 .WithName("GetDocument")
 .WithTags("Document")

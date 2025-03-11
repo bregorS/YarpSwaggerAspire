@@ -1,6 +1,16 @@
 @Gateway_HostAddress = http://localhost:5154
 
-GET {{Gateway_HostAddress}}/weatherforecast/
+GET {{Gateway_HostAddress}}/api/v1/documents/
+Accept: application/json
+
+###
+
+GET {{Gateway_HostAddress}}/api/v1/documents/03fe66a9-3d8c-44a6-8ca6-595ca3a62729
+Accept: application/json
+
+###
+
+POST {{Gateway_HostAddress}}/api/v1/documents/
 Accept: application/json
 
 ###

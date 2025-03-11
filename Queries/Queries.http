@@ -1,6 +1,11 @@
 @Queries_HostAddress = http://localhost:5009
 
-GET {{Queries_HostAddress}}/weatherforecast/
+GET {{Queries_HostAddress}}/api/v1/documents/
+Accept: application/json
+
+###
+
+GET {{Queries_HostAddress}}/api/v1/documents/03fe66a9-3d8c-44a6-8ca6-595ca3a62729
 Accept: application/json
 
 ###
