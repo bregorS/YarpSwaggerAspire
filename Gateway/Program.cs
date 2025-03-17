@@ -44,8 +44,6 @@ var app = builder.Build();
         });
     }
 
-    app.UseRouting();
-
     app.MapReverseProxy();
 
     app.UseHttpsRedirection();

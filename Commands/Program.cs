@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Mvc;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.AddServiceDefaults();
@@ -20,11 +22,12 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapPost("api/v1/documents/", async () =>
+app.MapPost("api/v1/documents", async ([FromForm] CreateDocumentRequest request) =>
 {
     Console.WriteLine("CreateDocument called");
     return TypedResults.Created();
 })
+.Accepts<CreateDocumentRequest>("multipart/form-data")
 .WithName("CreateDocument")
 .WithTags("Document")
 .WithDescription("Create a new system wide document e.g. Policy Conditions")
@@ -33,6 +36,7 @@ app.MapPost("api/v1/documents/", async () =>
 .Produces(StatusCodes.Status403Forbidden)
 .Produces(StatusCodes.Status404NotFound)
 .WithOpenApi()
+.DisableAntiforgery();
 ;
 
 app.Run();

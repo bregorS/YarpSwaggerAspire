@@ -1,0 +1,23 @@
+Loans review 72
+
+10126 - Outstanding balance widget
+https://localhost:4011/loans/a4cffb87-5208-4a9d-9ea9-6843a81660b6/detail
+
+
+10005 - Loan risk tab
+https://test.blackfinch.tech/loans/48437849-d579-47d9-8ffa-7ece09f145e4/detail
+
+7480 - New risk rating acquired asset
+
+7587 - LTV calculation to include true exit fees
+https://localhost:4011/loans/a4cffb87-5208-4a9d-9ea9-6843a81660b6/detail
+
+10004 - Loan closure detail
+https://test.blackfinch.tech/loans/ab44c97e-ddc1-4909-8bd4-471a53443c9b/detail
+
+
+4853 - NEST Terms screen incorrect display of duration - Fix term calculation
+
+BUG 10060 - Projection of risk rating on delete
+BUG 9086 - Default interest rate incorrect
+
