@@ -21,6 +21,7 @@ public class SwaggerClientTests()
 
         // Act
         var httpClientCommands = app.CreateHttpClient("commands");
+        await resourceNotificationService.WaitForResourceAsync("commands", KnownResourceStates.Running).WaitAsync(TimeSpan.FromSeconds(30));
 
         var sut = new AdminClient(httpClientCommands);
         var file = File.ReadAllBytes("LoansReview.txt");
